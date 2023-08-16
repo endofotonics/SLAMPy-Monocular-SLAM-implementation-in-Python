@@ -1,6 +1,6 @@
 import numpy as np
 import cv2
-import os,sys,time,g2o
+import os, sys, time, g2o
 from triangulation import triangulate
 from Camera import denormalize, normalize, Camera
 from display import Display
