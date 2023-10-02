@@ -4,7 +4,7 @@ import cv2
 def featureMapping(image):
   orb = cv2.ORB_create()
   pts = cv2.goodFeaturesToTrack(np.mean(image, axis=2).astype(np.uint8), 1000, qualityLevel=0.01, minDistance=7)
-  key_pts = [cv2.KeyPoint(x=f[0][0], y=f[0][1], _size=20) for f in pts]
+  key_pts = [cv2.KeyPoint(x=f[0][0], y=f[0][1], size=20) for f in pts]
   key_pts, descriptors = orb.compute(image, key_pts)
 
   # Return Key_points and ORB_descriptors
